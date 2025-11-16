@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codename Oyster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Basic styling for centering and responsiveness */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            /* Nature themed background */
+            background-color: #1a202c; /* Dark fallback color */
+            background-image: url('https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1875&q=80');
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the image */
+            background-attachment: fixed; /* Keep background fixed during scroll */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative; /* Needed for the overlay */
+            font-family: sans-serif; /* Default font for body */
+        }
+        /* Semi-transparent overlay for better contrast */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1; /* Place overlay above background but below content */
+        }
+        .container {
+            text-align: center;
+            position: relative; /* Ensure container is above the overlay */
+            z-index: 2;
+        }
+        /* Styling for the title */
+        h1.title {
+            font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
+            font-size: 2.5rem; /* Adjust size as needed */
+            font-weight: 700; /* Bold weight */
+            color: #e2e8f0; /* Light text color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for visibility */
+            margin-bottom: 1.5rem; /* Space between title and image */
+            line-height: 1.2;
+        }
+        /* Link element has no background or padding */
+        a {
+            display: inline-block; /* Allows setting max-width */
+            text-decoration: none; /* Remove underline from link */
+        }
+        img {
+            max-width: 100%;
+            max-height: 70vh; /* Reduced slightly to give title more space */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Remove extra space below image */
+            /* Keep rounded corners and shadow on the image itself */
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* Adjusted shadow slightly */
+            transition: transform 0.2s ease-in-out;
+        }
+        a:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 600px) {
+            h1.title {
+                font-size: 1.8rem; /* Smaller title on small screens */
+                margin-bottom: 1rem;
+            }
+            img {
+                 max-height: 65vh; /* Adjust image height */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Codename: Oyster</h1>
+        <a href="https://github.com/codenameoyster" target="_blank" rel="noopener noreferrer">
+            <img src="https://avatars.githubusercontent.com/u/206423490?s=200&v=4" alt="Codename Oyster">
+        </a>
+    </div>
+</body>
+</html>
