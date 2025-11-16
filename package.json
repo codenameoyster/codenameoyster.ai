@@ -1,0 +1,21 @@
+{
+	"name": "codenameoyster-ai",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "wrangler dev",
+		"deploy": "wrangler deploy",
+		"lint": "eslint src",
+		"lint:fix": "eslint src --fix",
+		"typecheck": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20251115.0",
+		"@eslint/js": "^9.17.0",
+		"@typescript-eslint/eslint-plugin": "^8.46.4",
+		"@typescript-eslint/parser": "^8.46.4",
+		"eslint": "^9.39.1",
+		"typescript": "^5.9.3",
+		"wrangler": "^4.47.0"
+	}
+}
